@@ -1,0 +1,113 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String
+  email         String    @unique
+  password      String
+  avatarColor   String    @default("#2DD4BF")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  createdGroups Group[]       @relation("GroupCreator")
+  groups        GroupMember[]
+  paidExpenses  Expense[]     @relation("PaidBy")
+  splits        ExpenseSplit[]
+  settlements   Settlement[]  @relation("SettlementFrom")
+  settlementsTo Settlement[]  @relation("SettlementTo")
+  borrowingsOut Borrowing[]   @relation("BorrowingFrom")
+  borrowingsIn  Borrowing[]   @relation("BorrowingTo")
+}
+
+model Group {
+  id          String        @id @default(cuid())
+  name        String
+  description String?
+  category    String        @default("other")
+  creatorId   String?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  creator     User?          @relation("GroupCreator", fields: [creatorId], references: [id])
+
+  members     GroupMember[]
+  expenses    Expense[]
+  settlements Settlement[]
+  borrowings  Borrowing[]
+}
+
+model GroupMember {
+  id       String   @id @default(cuid())
+  userId   String
+  groupId  String
+  role     String   @default("member")
+  joinedAt DateTime @default(now())
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  group Group @relation(fields: [groupId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, groupId])
+}
+
+model Expense {
+  id          String         @id @default(cuid())
+  title       String
+  description String?
+  amount      Float
+  splitType   String         @default("equal")
+  paidById    String
+  groupId     String
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  paidBy  User           @relation("PaidBy", fields: [paidById], references: [id])
+  group   Group          @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  splits  ExpenseSplit[]
+}
+
+model ExpenseSplit {
+  id        String  @id @default(cuid())
+  expenseId String
+  userId    String
+  amount    Float
+  isPaid    Boolean @default(false)
+
+  expense Expense @relation(fields: [expenseId], references: [id], onDelete: Cascade)
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([expenseId, userId])
+}
+
+model Settlement {
+  id        String   @id @default(cuid())
+  amount    Float
+  fromId    String
+  toId      String
+  groupId   String
+  createdAt DateTime @default(now())
+
+  from  User  @relation("SettlementFrom", fields: [fromId], references: [id])
+  to    User  @relation("SettlementTo", fields: [toId], references: [id])
+  group Group @relation(fields: [groupId], references: [id], onDelete: Cascade)
+}
+
+model Borrowing {
+  id          String   @id @default(cuid())
+  amount      Float
+  fromId      String
+  toId        String
+  groupId     String
+  description String?
+  createdAt   DateTime @default(now())
+
+  from  User  @relation("BorrowingFrom", fields: [fromId], references: [id])
+  to    User  @relation("BorrowingTo", fields: [toId], references: [id])
+  group Group @relation(fields: [groupId], references: [id], onDelete: Cascade)
+}
