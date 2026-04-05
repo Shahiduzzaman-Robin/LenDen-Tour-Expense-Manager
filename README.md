@@ -119,8 +119,6 @@ Open http://localhost:3000
 
 ## Screenshots
 
-All current project screenshots from `public/screenshots/` are shown below.
-
 ### 1) App Screenshot 01
 
 ![App Screenshot 01](public/screenshots/app-screenshot-01.png)
