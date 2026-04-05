@@ -147,13 +147,6 @@ Open http://localhost:3000
 
 ![App Screenshot 08](public/screenshots/app-screenshot-08.png)
 
-## Roadmap
-
-- Export group report as PDF/CSV
-- Multi-language toggle (Bangla/English)
-- Payment reminder notifications
-- Cloud deployment guide
-
 ## License
 
 This project is currently private/not licensed for public redistribution unless explicitly permitted by the repository owner.
