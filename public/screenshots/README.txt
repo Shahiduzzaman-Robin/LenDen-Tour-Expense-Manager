@@ -1,9 +1,10 @@
-Add the screenshot files with these exact names so README image previews work:
+Current screenshot files used by README:
 
-- group-expenses.png
-- add-expense-modal.png
-- expense-history.png
-- member-net-balances.png
-- calculation-explanation.png
-- final-result-table.png
-- visual-graph.png
+- app-screenshot-01.png
+- app-screenshot-02.png
+- app-screenshot-03.png
+- app-screenshot-04.png
+- app-screenshot-05.png
+- app-screenshot-06.png
+- app-screenshot-07.png
+- app-screenshot-08.png

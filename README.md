@@ -119,35 +119,39 @@ Open http://localhost:3000
 
 ## Screenshots
 
-> Place screenshot files in `public/screenshots/` using the names below so these previews render on GitHub.
+All current project screenshots from `public/screenshots/` are shown below.
 
-### 1) Group - Expenses Tab
+### 1) App Screenshot 01
 
-![Group Expenses](public/screenshots/group-expenses.png)
+![App Screenshot 01](public/screenshots/app-screenshot-01.png)
 
-### 2) Add Expense Modal
+### 2) App Screenshot 02
 
-![Add Expense Modal](public/screenshots/add-expense-modal.png)
+![App Screenshot 02](public/screenshots/app-screenshot-02.png)
 
-### 3) Expense History List
+### 3) App Screenshot 03
 
-![Expense History](public/screenshots/expense-history.png)
+![App Screenshot 03](public/screenshots/app-screenshot-03.png)
 
-### 4) Member Net Balance Cards
+### 4) App Screenshot 04
 
-![Member Net Balances](public/screenshots/member-net-balances.png)
+![App Screenshot 04](public/screenshots/app-screenshot-04.png)
 
-### 5) হিসাব কীভাবে হলো (সহজ ব্যাখ্যা)
+### 5) App Screenshot 05
 
-![Calculation Explanation](public/screenshots/calculation-explanation.png)
+![App Screenshot 05](public/screenshots/app-screenshot-05.png)
 
-### 6) Final Result Table + Settlement Actions
+### 6) App Screenshot 06
 
-![Final Result Table](public/screenshots/final-result-table.png)
+![App Screenshot 06](public/screenshots/app-screenshot-06.png)
 
-### 7) Visual Debt Graph
+### 7) App Screenshot 07
 
-![Visual Debt Graph](public/screenshots/visual-graph.png)
+![App Screenshot 07](public/screenshots/app-screenshot-07.png)
+
+### 8) App Screenshot 08
+
+![App Screenshot 08](public/screenshots/app-screenshot-08.png)
 
 ## Roadmap
 
