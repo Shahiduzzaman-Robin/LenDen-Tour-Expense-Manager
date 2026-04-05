@@ -127,27 +127,23 @@ Open http://localhost:3000
 
 ![App Screenshot 02](public/screenshots/app-screenshot-02.png)
 
-### 3) App Screenshot 03
-
-![App Screenshot 03](public/screenshots/app-screenshot-03.png)
-
-### 4) App Screenshot 04
+### 3) App Screenshot 04
 
 ![App Screenshot 04](public/screenshots/app-screenshot-04.png)
 
-### 5) App Screenshot 05
+### 4) App Screenshot 05
 
 ![App Screenshot 05](public/screenshots/app-screenshot-05.png)
 
-### 6) App Screenshot 06
+### 5) App Screenshot 06
 
 ![App Screenshot 06](public/screenshots/app-screenshot-06.png)
 
-### 7) App Screenshot 07
+### 6) App Screenshot 07
 
 ![App Screenshot 07](public/screenshots/app-screenshot-07.png)
 
-### 8) App Screenshot 08
+### 7) App Screenshot 08
 
 ![App Screenshot 08](public/screenshots/app-screenshot-08.png)
 
